@@ -13,6 +13,7 @@ def fact(n):
 print(fact(1))
 print(fact(1000))
 '''
+#tail recursion(but when n=1000 it is also stack overflow,that is too bad!)
 def fact(n):
     return fact_iter(n,1)
 def fact_iter(num,product):
