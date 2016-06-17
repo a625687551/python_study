@@ -1,11 +1,9 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Jun 10 14:03:01 2016
 
-@author: wangjianfeng2014
-"""
-# -*- coding:utf-8 -*-
-#do_iter
+' do iter '
+
+_author_='wangjianfeng'
 
 #check which can do
 from collections import Iterable
