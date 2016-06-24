@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-'file open write close'
+'file open write close filter'
 
 _author_='wangjianfeng'
 
@@ -12,4 +12,9 @@ def text_create(name,msg):
     file.write(msg)
     file.close
     print('done')
-text_create('test','hello world! This is my first text open and write')
+def text_filter(word,censored_word='lame',changed_word='awesome'):
+    return word.replace(censored_word,changed_word)
+def censored_text_create(name,msg):
+    clean_msg=text_filter(msg)
+    text_create(name,clean_msg)
+censored_text_create('my file','python is lame')
