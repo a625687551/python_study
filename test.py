@@ -1,14 +1,14 @@
-#!usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 
 ' test '
 
 _author_='wangjianfeng'
 
-print('--------------------let\'s begein')
-temp=input("number:")
-guess=int(temp)
-if guess==8:
-    print('that is great, you are right!')
-else:
-    print('wrong')
+
+import requests
+
+# url='http://http://pythonscraping.com/files/processing.php'
+# params={'firstname':'wang','lastname':'jianfeng'}
+# r=requests.post("http://pythonscraping.com/pages/files/processing.php",data=params)
+a=1+2
+print(a)
