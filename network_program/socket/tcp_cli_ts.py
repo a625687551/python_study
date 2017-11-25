@@ -3,21 +3,20 @@
 
 from socket import *
 
-HOST = "127.0.0.1"
+HOST = "localhost"
 PORT = 21567
 BUFSIZ = 1024
 ADDR = (HOST, PORT)
 
-tcpclisock = socket(AF_INET, SOCK_STREAM)
-tcpclisock.connect(ADDR)
-
 while True:
+    tcpclisock = socket(AF_INET, SOCK_STREAM)
+    tcpclisock.connect(ADDR)
     data = input("> ")
     if not data:
         break
-    tcpclisock.send(data.encode("utf-8"))
+    tcpclisock.send("{} \n".format(data).encode("utf-8"))
     rec = tcpclisock.recv(BUFSIZ)
     if not rec:
         break
     print(rec.decode("utf-8"))
-tcpclisock.close()
+    tcpclisock.close()
